@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BEAST</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        table { border-spacing: 5px; }
+        th, td { padding: 5px; }
+    </style>
+</head>
+<body>
+<h1>List of jobs</h1>
+<a href="/">HOME</a>
+<table style="padding-top: 40px;">
+    <thead>
+        <tr>
+            <th>Job ID</th>
+            <th>Requested</th>
+            <th>Status</th>
+            <th>Upper Limit</th>
+            <th>Result</th>
+            <th>Started</th>
+            <th>Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="job : ${jobs}">
+            <td th:text="${job.id}"></td>
+            <td th:text="${job.requestDate}"></td>
+            <td th:text="${job.status}"></td>
+            <td th:text="${job.upperBound}"></td>
+            <td th:text="${job.result}"></td>
+            <td th:text="${job.startDate}"></td>
+            <td th:text="${job.endDate}"></td>
+
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

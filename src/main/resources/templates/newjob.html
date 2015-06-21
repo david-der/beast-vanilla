@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BEAST</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Submit a new job.</h1>
+<form action="/jobs/create" method="post">
+    <p>
+        <label name="upperLimit">Upper Limit:</label>
+        <input type="text" name="upperLimit" />
+    </p>
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
