@@ -7,5 +7,11 @@
 <body>
 <h1>Confirmed.</h1>
 <a href="/">HOME</a>
+
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
 </body>
 </html>

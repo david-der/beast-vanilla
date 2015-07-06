@@ -6,6 +6,12 @@
 </head>
 <body>
 <h1>BEAST</h1>
+
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
 <p><a href="/jobs/new">Create a new job.</a></p>
 <p><a href="/jobs/list">List of jobs.</a></p>
 </body>
